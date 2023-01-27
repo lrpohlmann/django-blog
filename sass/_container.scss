@@ -1,0 +1,113 @@
+@use "sass:map";
+@use "breakpoints";
+
+
+@media (max-width: map.get(breakpoints.$values, "pp-fim")) {
+    .container-pp {
+        width: 100%;
+    }
+
+    .container-p {
+        width: 100%;
+    }
+
+    .container-m {
+        width: 100%;
+    }
+
+    .container-g {
+        width: 100%;
+    }
+
+    .container-gg {
+        width: 100%;
+    }
+}
+
+@media (min-width: map.get(breakpoints.$values, "p-inicio")) and (max-width: map.get(breakpoints.$values, "p-fim")) {
+    .container-pp {
+        width: map.get(breakpoints.$values, "pp-fim");
+    }
+
+    .container-p {
+        width: 100%;
+    }
+
+    .container-m {
+        width: 100%;
+    }
+
+    .container-g {
+        width: 100%;
+    }
+
+    .container-gg {
+        width: 100%;
+    }
+}
+
+@media (min-width: map.get(breakpoints.$values, "m-inicio")) and (max-width: map.get(breakpoints.$values, "m-fim")) {
+    .container-pp {
+        width: map.get(breakpoints.$values, "pp-fim");
+    }
+
+    .container-p {
+        width: map.get(breakpoints.$values, "p-fim");
+    }
+
+    .container-m {
+        width: 100%;
+    }
+
+    .container-g {
+        width: 100%;
+    }
+
+    .container-gg {
+        width: 100%;
+    }
+}
+
+@media (min-width: map.get(breakpoints.$values, "g-inicio")) and (max-width: map.get(breakpoints.$values, "g-fim")) {
+    .container-pp {
+        width: map.get(breakpoints.$values, "pp-fim");
+    }
+
+    .container-p {
+        width: map.get(breakpoints.$values, "p-fim");
+    }
+
+    .container-m {
+        width: map.get(breakpoints.$values, "m-fim");
+    }
+
+    .container-g {
+        width: 100%;
+    }
+
+    .container-gg {
+        width: 100%;
+    }
+}
+
+@media (min-width: map.get(breakpoints.$values, "gg-inicio")) {
+    .container-pp {
+        width: map.get(breakpoints.$values, "pp-fim");
+    }
+
+    .container-p {
+        width: map.get(breakpoints.$values, "p-fim");
+    }
+
+    .container-m {
+        width: map.get(breakpoints.$values, "m-fim");
+    }
+
+    .container-g {
+        width: map.get(breakpoints.$values, "g-fim")
+    }
+
+    .container-gg {
+        width: 100%;
+    }
+}

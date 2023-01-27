@@ -1,0 +1,87 @@
+@media (max-width: 480px) {
+  .container-pp {
+    width: 100%;
+  }
+  .container-p {
+    width: 100%;
+  }
+  .container-m {
+    width: 100%;
+  }
+  .container-g {
+    width: 100%;
+  }
+  .container-gg {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .container-pp {
+    width: 480px;
+  }
+  .container-p {
+    width: 100%;
+  }
+  .container-m {
+    width: 100%;
+  }
+  .container-g {
+    width: 100%;
+  }
+  .container-gg {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container-pp {
+    width: 480px;
+  }
+  .container-p {
+    width: 768px;
+  }
+  .container-m {
+    width: 100%;
+  }
+  .container-g {
+    width: 100%;
+  }
+  .container-gg {
+    width: 100%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .container-pp {
+    width: 480px;
+  }
+  .container-p {
+    width: 768px;
+  }
+  .container-m {
+    width: 1024px;
+  }
+  .container-g {
+    width: 100%;
+  }
+  .container-gg {
+    width: 100%;
+  }
+}
+@media (min-width: 1201px) {
+  .container-pp {
+    width: 480px;
+  }
+  .container-p {
+    width: 768px;
+  }
+  .container-m {
+    width: 1024px;
+  }
+  .container-g {
+    width: 1200px;
+  }
+  .container-gg {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
