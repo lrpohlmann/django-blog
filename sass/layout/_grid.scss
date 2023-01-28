@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "../breakpoints";
+
+.grid-3-3 {
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(3, 1fr);
+    gap: 5px;
+
+    @media (max-width: map.get(breakpoints.$values, "p-fim")) {
+        grid-template: repeat(9, auto) / 1fr;
+    }
+}

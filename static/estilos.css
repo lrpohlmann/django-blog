@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("fontes/barlow/Barlow-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("fontes/barlow/Barlow-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("fontes/barlow/Barlow-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+body {
+  font-family: "Barlow";
+}
+
 @media (max-width: 480px) {
   .container-pp {
     width: 100%;
@@ -82,6 +104,27 @@
   .container-gg {
     width: 100%;
   }
+}
+.grid-3-3 {
+  display: grid;
+  grid-template: repeat(3, auto)/repeat(3, 1fr);
+  gap: 5px;
+}
+@media (max-width: 768px) {
+  .grid-3-3 {
+    grid-template: repeat(9, auto)/1fr;
+  }
+}
+
+.post-card {
+  border: 1px solid black;
+  border-radius: 1px;
+  box-shadow: 2px 2px 3px black;
+  padding: 2px;
+}
+
+.post-card-titulo {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=estilos.css.map */
