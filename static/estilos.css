@@ -329,6 +329,18 @@ body {
   font-family: "Barlow";
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.gap-5 {
+  gap: 5px;
+}
+
 @media (max-width: 480px) {
   .container-pp {
     width: 100%;
@@ -434,6 +446,24 @@ body {
 
 .post-card-titulo {
   font-weight: 600;
+}
+
+.header-nav {
+  background: #0E7C7B;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav-link {
+  color: #D4F4DD;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.header-nav-link:hover {
+  color: white;
 }
 
 /*# sourceMappingURL=estilos.css.map */
