@@ -1,0 +1,16 @@
+@use "../cores";
+
+.input-base {
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 1px;
+
+    &:focus {
+        outline: 3px solid cores.$primaria;
+    }
+
+    &::placeholder {
+        font-style: italic;
+        font-size: .8rem;
+    }
+}

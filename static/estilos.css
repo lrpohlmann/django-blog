@@ -524,4 +524,17 @@ footer {
   transition: 1s color, box-shadow 1s;
 }
 
+.input-base {
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 1px;
+}
+.input-base:focus {
+  outline: 3px solid #0E7C7B;
+}
+.input-base::placeholder {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
 /*# sourceMappingURL=estilos.css.map */
