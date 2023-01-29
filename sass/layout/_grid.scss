@@ -3,10 +3,10 @@
 
 .grid-3-3 {
     display: grid;
-    grid-template: repeat(3, auto) / repeat(3, 1fr);
     gap: 5px;
+    grid-template: repeat(9, auto) / 1fr;
 
-    @media (max-width: map.get(breakpoints.$values, "p-fim")) {
-        grid-template: repeat(9, auto) / 1fr;
+    @media (min-width: map.get(breakpoints.$values, "m-inicio")) {
+        grid-template: repeat(3, auto) / repeat(3, 1fr);
     }
 }

@@ -463,12 +463,12 @@ footer {
 
 .grid-3-3 {
   display: grid;
-  grid-template: repeat(3, auto)/repeat(3, 1fr);
   gap: 5px;
+  grid-template: repeat(9, auto)/1fr;
 }
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .grid-3-3 {
-    grid-template: repeat(9, auto)/1fr;
+    grid-template: repeat(3, auto)/repeat(3, 1fr);
   }
 }
 
@@ -481,6 +481,10 @@ footer {
 
 .post-card-titulo {
   font-weight: 600;
+}
+
+.post-card-imagem {
+  width: 100%;
 }
 
 .header-nav {
