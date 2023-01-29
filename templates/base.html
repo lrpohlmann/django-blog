@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
 </head>
 
-<body>
+<body class="home-layout">
     <header>
         {% include 'partials/header.html' %}
     </header>
@@ -19,7 +19,12 @@
         {% block conteudo %}
         {% endblock %}
     </main>
+    <aside>
 
+    </aside>
+    <footer class="footer">
+        footer
+    </footer>
 </body>
 
 </html>

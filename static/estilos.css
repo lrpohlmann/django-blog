@@ -426,6 +426,41 @@ body {
     width: 100%;
   }
 }
+.home-layout {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "main" "aside" "footer";
+}
+@media (min-width: 769px) {
+  .home-layout {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header" "main main main aside" "footer footer footer footer";
+  }
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
 .grid-3-3 {
   display: grid;
   grid-template: repeat(3, auto)/repeat(3, 1fr);
@@ -464,6 +499,10 @@ body {
 }
 .header-nav-link:hover {
   color: white;
+}
+
+.footer {
+  background-color: #0E7C7B;
 }
 
 /*# sourceMappingURL=estilos.css.map */
