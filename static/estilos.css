@@ -475,8 +475,8 @@ footer {
 .post-card {
   border: 1px solid black;
   border-radius: 1px;
-  box-shadow: 2px 2px 3px black;
   padding: 2px;
+  box-shadow: 2px 2px 3px black;
 }
 
 .post-card-titulo {
@@ -507,6 +507,21 @@ footer {
 
 .footer {
   background-color: #0E7C7B;
+}
+
+.link-block {
+  display: block;
+  padding: 5px;
+  color: #0E7C7B;
+  border: 1px solid black;
+  border-radius: 1px;
+  font-weight: 600;
+  box-shadow: 2px 2px 3px black;
+}
+.link-block:hover {
+  color: #19e0de;
+  box-shadow: 2px 2px 3px #0E7C7B;
+  transition: 1s color, box-shadow 1s;
 }
 
 /*# sourceMappingURL=estilos.css.map */

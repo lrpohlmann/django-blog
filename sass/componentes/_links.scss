@@ -1,0 +1,19 @@
+@use "sass:color";
+@use "../cores";
+@use "../sombra";
+
+.link-block {
+    display: block;
+    padding: 5px;
+    color: cores.$primaria;
+    border: 1px solid black;
+    border-radius: 1px;
+    font-weight: 600;
+    @include sombra.sombra(black);
+
+    &:hover {
+        color: color.scale(cores.$primaria, $lightness: 30%);
+        @include sombra.sombra(cores.$primaria);
+        transition: 1s color, box-shadow 1s;
+    }
+}

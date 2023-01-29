@@ -1,8 +1,11 @@
+@use "../sombra";
+
+
 .post-card {
     border: 1px solid black;
     border-radius: 1px;
-    box-shadow: 2px 2px 3px black;
     padding: 2px;
+    @include sombra.sombra(black);
 }
 
 .post-card-titulo {
