@@ -337,6 +337,10 @@ body {
   flex-direction: row;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .gap-5 {
   gap: 5px;
 }
@@ -443,6 +447,11 @@ body {
 
 body {
   min-height: 100vh;
+}
+@media (min-width: 769px) {
+  body {
+    padding: 0 30px;
+  }
 }
 
 header {
