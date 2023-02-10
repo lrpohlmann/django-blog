@@ -26,6 +26,10 @@
 
 body {
     min-height: 100vh;
+
+    @media (min-width: map.get(breakpoints.$values, "m-inicio")) {
+        padding: 0 30px;
+    }
 }
 
 header {
