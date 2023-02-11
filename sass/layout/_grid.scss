@@ -6,6 +6,10 @@
     gap: 5px;
     grid-template: repeat(9, auto) / 1fr;
 
+    @media (min-width: map.get(breakpoints.$values, "p-inicio")) and (max-width: map.get(breakpoints.$values, "p-fim")) {
+        grid-template: auto / repeat(2, 1fr);
+    }
+
     @media (min-width: map.get(breakpoints.$values, "m-inicio")) {
         grid-template: repeat(3, auto) / repeat(3, 1fr);
     }

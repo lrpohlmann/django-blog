@@ -484,6 +484,11 @@ footer {
   gap: 5px;
   grid-template: repeat(9, auto)/1fr;
 }
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid-3-3 {
+    grid-template: auto/repeat(2, 1fr);
+  }
+}
 @media (min-width: 769px) {
   .grid-3-3 {
     grid-template: repeat(3, auto)/repeat(3, 1fr);
@@ -506,21 +511,21 @@ footer {
 }
 
 .footer {
-  background-color: #0E7C7B;
+  background-color: #0e7d4f;
 }
 
 .link-block {
   display: block;
   padding: 5px 15px;
-  color: #0E7C7B;
+  color: #0e7d4f;
   border: 1px solid black;
   border-radius: 1px;
   font-weight: 600;
   box-shadow: 2px 2px 3px black;
 }
 .link-block:hover {
-  color: #19e0de;
-  box-shadow: 2px 2px 3px #0E7C7B;
+  color: #19e18e;
+  box-shadow: 2px 2px 3px #0e7d4f;
   transition: 1s color, box-shadow 1s;
 }
 
@@ -530,7 +535,7 @@ footer {
   border-radius: 1px;
 }
 .input-base:focus {
-  outline: 3px solid #0E7C7B;
+  outline: 3px solid #0e7d4f;
 }
 .input-base::placeholder {
   font-style: italic;
