@@ -18,10 +18,10 @@ class Post(models.Model):
 
     def save(
         self,
-        force_insert: bool = ...,
-        force_update: bool = ...,
-        using: Optional[str] = ...,
-        update_fields: Optional[Iterable[str]] = ...,
+        force_insert: bool = False,
+        force_update: bool = False,
+        using: Optional[str] = None,
+        update_fields: Optional[Iterable[str]] = None,
     ) -> None:
         if not self.slug:
             self.slug = slugify(self.titulo)

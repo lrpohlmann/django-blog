@@ -9,6 +9,8 @@
     <title>{% block titulo_pagina %}Document{% endblock %}</title>
 
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    {% block fim_da_head %}
+    {% endblock fim_da_head %}
 </head>
 
 <body class="home-layout">
@@ -26,6 +28,8 @@
     <footer class="footer">
         footer
     </footer>
+    {% block fim_de_pagina %}
+    {% endblock fim_de_pagina %}
 </body>
 
 </html>

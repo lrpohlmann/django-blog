@@ -1,37 +1,33 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block fim_da_head %}
+{% include 'partials/prism-css.html' %}
+{% endblock fim_da_head %}
 
 {% block conteudo %}
 <article class="container-gg">
-    <h1 class="container-gg">Título do Post</h1>
+    <h1 class="container-gg">{{post.titulo}}</h1>
     <details open>
         <ul>
-            <li><span>Autor:</span> <span>Leonardo</span></li>
-            <li><span>Data:</span> <time datetime="">16/02/1994</time></li>
+            <li><span>Autor:</span> <span>{{post.autor.username}}</span></li>
+            <li><span>Data:</span> <time datetime="">{{post.data_criacao}}</time></li>
             <li>
                 <span>
                     Assuntos:
                 </span>
                 <div class="flex flex-row gap-5">
-                    <a class="link-block" href="#">Python</a>
-                    <a class="link-block" href="#">Javascript</a>
+                    {% for assunto in post.assuntos.all %}
+                    <a class="link-block" href="#">{{assunto.nome}}</a>
+                    {% endfor %}
                 </div>
             </li>
         </ul>
     </details>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, ducimus. Provident reiciendis numquam
-        doloremque, veritatis repellat voluptatibus, voluptas qui deserunt at voluptate saepe ut. Saepe officia error
-        ipsam possimus quidem.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, unde expedita? Quis, distinctio! Consequuntur
-        rerum est quas corporis, fuga ullam quisquam ex. Delectus in similique sequi iste officiis, dolor repellat.</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, ducimus. Provident reiciendis numquam
-        doloremque, veritatis repellat voluptatibus, voluptas qui deserunt at voluptate saepe ut. Saepe officia error
-        ipsam possimus quidem.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, unde expedita? Quis, distinctio! Consequuntur
-        rerum est quas corporis, fuga ullam quisquam ex. Delectus in similique sequi iste officiis, dolor repellat.</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, ducimus. Provident reiciendis numquam
-        doloremque, veritatis repellat voluptatibus, voluptas qui deserunt at voluptate saepe ut. Saepe officia error
-        ipsam possimus quidem.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, unde expedita? Quis, distinctio! Consequuntur
-        rerum est quas corporis, fuga ullam quisquam ex. Delectus in similique sequi iste officiis, dolor repellat.</p>
+    {{post.corpo | safe}}
 </article>
 {% endblock %}
+
+{% block fim_de_pagina %}
+{% include 'partials/prism-script.html' %}
+{% endblock fim_de_pagina %}
