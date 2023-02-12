@@ -1,7 +1,9 @@
-.padding-5 {
-    padding: 5px;
-}
+@for $i from 1 through 15 {
+    .padding-#{$i} {
+        padding: #{$i}px;
+    }
 
-.padding-vert-5 {
-    padding: 5px 0;
+    .padding-vert-#{$i} {
+        padding: #{$i}px 0;
+    }
 }
