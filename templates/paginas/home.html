@@ -8,18 +8,20 @@
     <h2 class="titulo-2">Últimos Posts</h2>
     <div class="grid-3-3">
         <article class='post-card'>
-            <img class="post-card-imagem"
-                src="https://www.petz.com.br/blog/wp-content/uploads/2020/01/vira-lata-caramelo-cao.jpg" alt=""
-                srcset="">
-            <div class="titulo-4">Título Post</div>
-            <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quibusdam, unde optio aut
-                architecto laudantium repudiandae obcaecati aliquid perferendis. Possimus quod unde accusamus facere
-                voluptatem tempore dignissimos odit incidunt nesciunt.
-            </div>
-            <div>
-                Comentarios
-            </div>
+            <a href="{% url 'posts:post_view' pk=1 %}" class="link-sem-estilo">
+                <img class="post-card-imagem"
+                    src="https://www.petz.com.br/blog/wp-content/uploads/2020/01/vira-lata-caramelo-cao.jpg" alt=""
+                    srcset="">
+                <div class="titulo-4">Título Post</div>
+                <div>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quibusdam, unde optio aut
+                    architecto laudantium repudiandae obcaecati aliquid perferendis. Possimus quod unde accusamus facere
+                    voluptatem tempore dignissimos odit incidunt nesciunt.
+                </div>
+                <div>
+                    Comentarios
+                </div>
+            </a>
         </article>
         <article class='post-card'>
             <div class="titulo-4">Título Post</div>

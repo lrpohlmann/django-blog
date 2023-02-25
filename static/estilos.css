@@ -754,6 +754,19 @@ footer {
   text-decoration: underline;
 }
 
+.link-sem-estilo {
+  color: unset;
+  text-decoration: unset;
+}
+.link-sem-estilo:hover {
+  color: unset;
+  text-decoration: unset;
+}
+.link-sem-estilo:visited {
+  color: unset;
+  text-decoration: unset;
+}
+
 .input-base {
   padding: 2px;
   border: 1px solid black;

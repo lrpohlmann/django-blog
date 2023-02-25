@@ -35,3 +35,18 @@
         text-decoration: underline;
     }
 }
+
+.link-sem-estilo {
+    color: unset;
+    text-decoration: unset;
+
+    &:hover {
+        color: unset;
+        text-decoration: unset;
+    }
+
+    &:visited {
+        color: unset;
+        text-decoration: unset;
+    }
+}
