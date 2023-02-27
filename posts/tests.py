@@ -8,8 +8,20 @@ class TestPost(TestCase):
         post = baker.make("Post")
         resposta = self.client.get(f"/post/{post.pk}")
 
-        assert resposta.status_code == 200
+        self.assertEqual(resposta.status_code, 200)
 
-    def test_post_grid(self):
-        baker.make("Post")
-        assert self.client.get("/post/grid").status_code == 200
+
+class TestPostGridView(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        baker.make("Post", 20)
+
+    def test_post_grid_sem_pagina_indicada(self):
+        self.assertEqual(self.client.get("/post/grid").status_code, 200)
+
+    def test_post_grid_com_pagina_indicada(self):
+        for n in range(0, 10):
+            with self.subTest(msg=f"Testando com página número {n}"):
+                self.assertEqual(
+                    self.client.get("/post/grid", data={"pagina": n}).status_code, 200
+                )
