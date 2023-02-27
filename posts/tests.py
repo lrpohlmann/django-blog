@@ -9,3 +9,7 @@ class TestPost(TestCase):
         resposta = self.client.get(f"/post/{post.pk}")
 
         assert resposta.status_code == 200
+
+    def test_post_grid(self):
+        baker.make("Post")
+        assert self.client.get("/post/grid").status_code == 200

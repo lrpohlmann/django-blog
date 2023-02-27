@@ -6,7 +6,7 @@
 </div>
 <section class="container-gg">
     <h2 class="titulo-2">Últimos Posts</h2>
-    {% include 'partials/grid-posts.html' %}
+    <div hx-get="{% url 'posts:post_grid' %}" hx-trigger="load" hx-swap="outerHTML"></div>
 </section>
 {% endblock %}
 {% block lateral %}
