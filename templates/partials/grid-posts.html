@@ -1,4 +1,4 @@
-<div class="grid-3-3">
+<div class="grid-3-3" id="posts-grid">
     {% for p in posts %}
     <article class='post-card'>
         <a href="{% url 'posts:post_view' pk=p.pk %}" class="link-sem-estilo">
@@ -11,4 +11,21 @@
         </a>
     </article>
     {% endfor %}
+    {% if pagina_obj.has_other_pages %}
+    <div>
+        {% if pagina_obj.has_previous %}
+        <button type="button" hx-get="{% url 'posts:post_grid' %}?pagina={{pagina_obj.previous_page_number}}"
+            hx-target="#posts-grid" hx-swap="outerHTML">{{pagina_obj.previous_page_number}}</button>
+        {% endif %}
+
+        <div>
+            {{pagina_obj.number}}
+        </div>
+
+        {% if pagina_obj.has_next %}
+        <button type="button" hx-get="{% url 'posts:post_grid' %}?pagina={{pagina_obj.next_page_number}}"
+            hx-target="#posts-grid" hx-swap="outerHTML">{{pagina_obj.next_page_number}}</button>
+        {% endif %}
+    </div>
+    {% endif %}
 </div>
