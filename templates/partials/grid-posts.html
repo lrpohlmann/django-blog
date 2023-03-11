@@ -2,7 +2,9 @@
     {% for p in posts %}
     <article class='post-card'>
         <a href="{% url 'posts:post_view' pk=p.pk %}" class="link-sem-estilo">
-            <div class="titulo-4">{{p.titulo}}</div>
+            <div class="container-gg">
+                <h3 class="titulo-4">{{p.titulo}}</h3>
+            </div>
             <div>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quibusdam, unde optio aut
                 architecto laudantium repudiandae obcaecati aliquid perferendis. Possimus quod unde accusamus facere

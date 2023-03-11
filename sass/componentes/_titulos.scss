@@ -1,3 +1,10 @@
+@mixin titulo-mixin($tamanho-fonte, $peso-fonte) {
+    word-break: break-all;
+    hyphens: auto;
+    font-size: $tamanho-fonte;
+    font-weight: $peso-fonte;
+}
+
 h1,
 h2,
 h3,
@@ -8,21 +15,21 @@ h6 {
 }
 
 .titulo-principal {
-    font-size: 3rem;
-    font-weight: 800;
+    @include titulo-mixin(3rem, 800);
 }
 
 .titulo-2 {
+    @include titulo-mixin(2rem, 700);
     font-size: 2rem;
     font-weight: 700;
 }
 
 .titulo-3 {
+    @include titulo-mixin(1.5rem, 600);
     font-size: 1.5rem;
     font-weight: 600;
 }
 
 .titulo-4 {
-    font-size: 1.3rem;
-    font-weight: 600;
+    @include titulo-mixin(1.3rem, 600);
 }

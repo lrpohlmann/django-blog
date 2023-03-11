@@ -790,21 +790,33 @@ h6 {
 }
 
 .titulo-principal {
+  word-break: break-all;
+  hyphens: auto;
   font-size: 3rem;
   font-weight: 800;
 }
 
 .titulo-2 {
+  word-break: break-all;
+  hyphens: auto;
+  font-size: 2rem;
+  font-weight: 700;
   font-size: 2rem;
   font-weight: 700;
 }
 
 .titulo-3 {
+  word-break: break-all;
+  hyphens: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 .titulo-4 {
+  word-break: break-all;
+  hyphens: auto;
   font-size: 1.3rem;
   font-weight: 600;
 }
