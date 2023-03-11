@@ -7,8 +7,10 @@
 
 {% block conteudo %}
 <article class="container-gg">
-    <h1 class="container-gg">{{post.titulo}}</h1>
-    <details open>
+    <div>
+        <h1 class="titulo-principal">{{post.titulo}}</h1>
+    </div>
+    <details open class="container-gg" style="word-break: break-all; hyphens: auto;">
         <ul>
             <li><span>Autor:</span> <span>{{post.autor.username}}</span></li>
             <li><span>Data:</span> <time datetime="">{{post.data_criacao}}</time></li>
@@ -24,7 +26,9 @@
             </li>
         </ul>
     </details>
-    {{post.corpo | safe}}
+    <div class="container-gg" style="word-break: break-all; hyphens: auto;">
+        {{post.corpo | safe}}
+    </div>
 </article>
 {% endblock %}
 
